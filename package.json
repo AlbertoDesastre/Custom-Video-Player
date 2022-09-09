@@ -4,7 +4,9 @@
   "description": "��#\u0000 \u0000R\u0000e\u0000p\u0000r\u0000o\u0000d\u0000u\u0000c\u0000t\u0000o\u0000r\u0000\r\u0000 \u0000\r\u0000 \u0000R\u0000e\u0000p\u0000r\u0000o\u0000d\u0000u\u0000c\u0000t\u0000o\u0000r\u0000 \u0000h\u0000e\u0000c\u0000h\u0000o\u0000 \u0000p\u0000o\u0000r\u0000 \u0000m\u0000�\u0000.\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --include-path scss styles/scss/main.scss styles/css/main.css",
+    "watch": "nodemon -e scss -x npm run scss"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,8 @@
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "eslint": "^8.23.0",
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
     "typescript": "^4.8.3"
   }
