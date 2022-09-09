@@ -1,0 +1,38 @@
+body {
+  background-color: lightgray;
+}
+body h1 {
+  background-color: lightsalmon;
+}
+
+#section_video {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+#section_video video {
+  height: 100vh;
+  width: 100vw;
+}
+
+#section_controllers {
+  background-color: lightgreen;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  overflow: hidden;
+}/*# sourceMappingURL=main.css.map */
