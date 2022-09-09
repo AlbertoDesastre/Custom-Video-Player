@@ -1,0 +1,27 @@
+{
+  "name": "reproductor",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000R\u0000e\u0000p\u0000r\u0000o\u0000d\u0000u\u0000c\u0000t\u0000o\u0000r\u0000\r\u0000 \u0000\r\u0000 \u0000R\u0000e\u0000p\u0000r\u0000o\u0000d\u0000u\u0000c\u0000t\u0000o\u0000r\u0000 \u0000h\u0000e\u0000c\u0000h\u0000o\u0000 \u0000p\u0000o\u0000r\u0000 \u0000m\u0000�\u0000.\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlbertoDesastre/Reproductor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlbertoDesastre/Reproductor/issues"
+  },
+  "homepage": "https://github.com/AlbertoDesastre/Reproductor#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
+    "@typescript-eslint/parser": "^5.36.2",
+    "eslint": "^8.23.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
+  }
+}
