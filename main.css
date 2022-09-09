@@ -1,6 +1,12 @@
 body {
-  background-color: lightgreen;
+  background-color: lightgray;
 }
 body h1 {
   background-color: lightsalmon;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }/*# sourceMappingURL=main.css.map */
