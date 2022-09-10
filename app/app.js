@@ -15,6 +15,7 @@ const everyControl = document.querySelector("#section_controllers");
 const eventSection = document.querySelector("#list_events");
 
 let isItReady = false;
+let isItPlaying = false;
 let hideAndUnhide;
 let currentEvents = [];
 
@@ -42,6 +43,7 @@ fullscreen.addEventListener("click", () => {
 
 /* Play and pause management */
 play.addEventListener("click", () => {
+  isItPlaying = true;
   video.play();
   play.hidden = true;
   pause.hidden = false;
@@ -49,19 +51,20 @@ play.addEventListener("click", () => {
 
 /* Shows controller if the mouse it's moved */
 video.addEventListener("mousemove", () => {
-  //   if (isItReady) {
-  //     everyControl.classList.remove("please_hide");
-  //     /* This clearTimeout must exists. If it wasn't here the hideAndUnhide
-  // function would still be running every 2 seconds after the mouse is moved.
-  // This would result in the controllers menu "clipping" */
-  //     clearTimeout(hideAndUnhide);
-  //     hideAndUnhide = setTimeout(() => {
-  //       everyControl.classList.add("please_hide");
-  //     }, 2000);
-  //   }
+  if (isItReady && isItPlaying) {
+    everyControl.classList.remove("please_hide");
+    /* This clearTimeout must exists. If it wasn't here the hideAndUnhide
+  function would still be running every 2 seconds after the mouse is moved.
+  This would result in the controllers menu "clipping" */
+    clearTimeout(hideAndUnhide);
+    hideAndUnhide = setTimeout(() => {
+      everyControl.classList.add("please_hide");
+    }, 2000);
+  }
 });
 
 pause.addEventListener("click", () => {
+  isItPlaying = false;
   video.pause();
   play.hidden = false;
   pause.hidden = true;
