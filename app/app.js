@@ -43,9 +43,12 @@ pause.addEventListener("click", () => {
   pause.hidden = true;
 });
 
-/* Video progress's management */
+/* Video's current time and progress management */
 
 video.addEventListener("timeupdate", () => {
   /*  console.log(durationToSeconds(video.currentTime)); */
   current_time.textContent = durationToSeconds(video.currentTime);
+
+  progressBar.max = video.duration;
+  progressBar.value = video.currentTime;
 });
