@@ -8,9 +8,14 @@ const fullscreen = document.querySelector(".fullscreen");
 const progressBar = document.querySelector("progress");
 const current_time = document.querySelector(".current_time");
 const video_duration = document.querySelector(".video_duration");
+const everyControl = document.querySelector("#section_controllers");
+
+let isItReady = false;
+let hideAndUnhide;
 
 const readyToPlay = () => {
   video_duration.textContent = durationToSeconds(video.duration);
+  isItReady = true;
 };
 
 if (video.readyState >= 2) {
@@ -37,13 +42,29 @@ play.addEventListener("click", () => {
   pause.hidden = false;
 });
 
+/* Shows controller if the mouse it's moved */
+video.addEventListener("mousemove", () => {
+  if (isItReady) {
+    everyControl.classList.remove("please_hide");
+
+    /* This clearTimeout must exists. If it wasn't here the hideAndUnhide
+function would still be running every 2 seconds after the mouse is moved.
+This would result in the controllers menu "clipping" */
+    clearTimeout(hideAndUnhide);
+
+    hideAndUnhide = setTimeout(() => {
+      everyControl.classList.add("please_hide");
+    }, 2000);
+  }
+});
+
 pause.addEventListener("click", () => {
   video.pause();
   play.hidden = false;
   pause.hidden = true;
 });
 
-/* Video's current time and progress management */
+/* Video's current time management */
 
 video.addEventListener("timeupdate", () => {
   /*  console.log(durationToSeconds(video.currentTime)); */
