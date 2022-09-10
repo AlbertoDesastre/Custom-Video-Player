@@ -29,6 +29,11 @@ body h1 {
   display: none;
 }
 
+#list_events {
+  position: absolute;
+  background-color: lightyellow;
+}
+
 * {
   margin: 0;
   padding: 0;

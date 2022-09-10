@@ -1,4 +1,7 @@
-import { durationToSeconds } from "./helpers.js";
+import {
+  durationToSeconds,
+  getEventsMatchingVideoCurrentSecond,
+} from "./helpers.js";
 
 const app = document.querySelector("main");
 const video = document.querySelector("video");
@@ -9,9 +12,11 @@ const progressBar = document.querySelector("progress");
 const current_time = document.querySelector(".current_time");
 const video_duration = document.querySelector(".video_duration");
 const everyControl = document.querySelector("#section_controllers");
+const eventSection = document.querySelector("#list_events");
 
 let isItReady = false;
 let hideAndUnhide;
+let currentEvents = [];
 
 const readyToPlay = () => {
   video_duration.textContent = durationToSeconds(video.duration);
@@ -72,7 +77,29 @@ video.addEventListener("timeupdate", () => {
 
   progressBar.max = video.duration;
   progressBar.value = video.currentTime;
+
+  const events = getEventsMatchingVideoCurrentSecond(video.currentTime);
+
+  /* If an event must ocurre when the video has reached certain point it will be shown */
+  if (JSON.stringify(events) !== JSON.stringify(currentEvents)) {
+    setEvents(events);
+  }
 });
+
+const setEvents = (events) => {
+  currentEvents = events;
+
+  /* The join down there basically separates every string of an array, that way the commas
+won't be shown. */
+
+  eventSection.innerHTML = `<ul>
+      ${currentEvents
+        .map((evento) => {
+          return `<li>${evento.text}</li>`;
+        })
+        .join("")}
+      </ul>`;
+};
 
 /* Video's progress status management */
 
@@ -83,3 +110,5 @@ progressBar.addEventListener("click", (e) => {
     progressBar.offsetWidth;
   video.currentTime = value;
 });
+
+/* Showing events */
