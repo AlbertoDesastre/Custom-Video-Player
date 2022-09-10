@@ -49,18 +49,16 @@ play.addEventListener("click", () => {
 
 /* Shows controller if the mouse it's moved */
 video.addEventListener("mousemove", () => {
-  if (isItReady) {
-    everyControl.classList.remove("please_hide");
-
-    /* This clearTimeout must exists. If it wasn't here the hideAndUnhide
-function would still be running every 2 seconds after the mouse is moved.
-This would result in the controllers menu "clipping" */
-    clearTimeout(hideAndUnhide);
-
-    hideAndUnhide = setTimeout(() => {
-      everyControl.classList.add("please_hide");
-    }, 2000);
-  }
+  //   if (isItReady) {
+  //     everyControl.classList.remove("please_hide");
+  //     /* This clearTimeout must exists. If it wasn't here the hideAndUnhide
+  // function would still be running every 2 seconds after the mouse is moved.
+  // This would result in the controllers menu "clipping" */
+  //     clearTimeout(hideAndUnhide);
+  //     hideAndUnhide = setTimeout(() => {
+  //       everyControl.classList.add("please_hide");
+  //     }, 2000);
+  //   }
 });
 
 pause.addEventListener("click", () => {
