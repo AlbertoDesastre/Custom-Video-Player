@@ -73,3 +73,13 @@ video.addEventListener("timeupdate", () => {
   progressBar.max = video.duration;
   progressBar.value = video.currentTime;
 });
+
+/* Video's progress status management */
+
+progressBar.addEventListener("click", (e) => {
+  const whereDidTheUserClickOnProgressBar = e.pageX - progressBar.offsetLeft;
+  const value =
+    (whereDidTheUserClickOnProgressBar * progressBar.max) /
+    progressBar.offsetWidth;
+  video.currentTime = value;
+});
