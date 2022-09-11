@@ -18,11 +18,10 @@ main {
   align-items: center;
 
   article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border: 3px solid rgb(40, 45, 46);
     border-radius: 5px;
     width: 95vw;
+    position: relative;
+    top: 1rem;
   }
 }

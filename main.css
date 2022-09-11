@@ -15,8 +15,8 @@ body h1 {
   align-items: center;
   align-self: center;
   width: 100%;
-  position: relative;
-  bottom: 1.7rem;
+  position: absolute;
+  top: 9rem;
   background-color: rgba(212, 212, 212, 0.7);
   /* Pending to make this "p" a contain a single "time"
   with both current time / video_duration */
@@ -77,10 +77,9 @@ main {
   align-items: center;
 }
 main article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border: 3px solid rgb(40, 45, 46);
   border-radius: 5px;
   width: 95vw;
+  position: relative;
+  top: 1rem;
 }/*# sourceMappingURL=main.css.map */
