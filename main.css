@@ -16,7 +16,7 @@ body h1 {
   align-self: center;
   width: 100%;
   position: absolute;
-  top: 6.9rem;
+  bottom: 3.9rem;
   background-color: rgba(212, 212, 212, 0.7);
   /* Pending to make this "p" a contain a single "time"
   with both current time / video_duration */
