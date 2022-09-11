@@ -1,7 +1,8 @@
-@import "./styles/test";
 @import "./styles/svideo";
 @import "./styles/scontrollers";
 @import "./styles/events";
+@import "./styles/description";
+@import "./styles/presentation";
 
 * {
   margin: 0;
@@ -10,19 +11,19 @@
 }
 
 body {
-  background-color: rgb(212, 240, 244);
+  background-color: rgb(241, 241, 241);
 }
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 
-  article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  article.article_with_video {
     border: 3px solid rgb(40, 45, 46);
     border-radius: 5px;
     width: 95vw;
+    position: relative;
+    top: 1rem;
   }
 }

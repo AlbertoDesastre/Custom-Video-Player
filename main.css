@@ -1,10 +1,3 @@
-body {
-  background-color: lightgray;
-}
-body h1 {
-  background-color: lightsalmon;
-}
-
 #section_video video {
   height: 100%;
   width: 100%;
@@ -15,9 +8,9 @@ body h1 {
   align-items: center;
   align-self: center;
   width: 100%;
-  position: relative;
-  bottom: 1.5rem;
-  background-color: lightgray;
+  position: absolute;
+  bottom: 3.9rem;
+  background-color: rgba(212, 212, 212, 0.7);
   /* Pending to make this "p" a contain a single "time"
   with both current time / video_duration */
 }
@@ -58,7 +51,86 @@ body h1 {
 
 #list_events {
   position: absolute;
+  top: 5px;
+  right: 10px;
   background-color: lightyellow;
+  border-radius: 2px;
+  max-width: 70%;
+  overflow: hidden;
+}
+#list_events ul {
+  list-style: none;
+}
+
+.section_description {
+  /*   position: absolute;
+  top: 0;
+  right: 0; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-left: 0.5rem;
+}
+.section_description p {
+  padding-bottom: 0.6rem;
+}
+
+article#presentation {
+  display: grid;
+  grid-template-areas: "img section_contact" "section_technologies section_technologies";
+  gap: 0.6rem;
+  background-color: white;
+  border: 3px solid gold;
+  border-radius: 5px;
+  width: 95vw;
+}
+article#presentation img {
+  grid-area: img;
+  max-width: 7rem;
+  max-height: 7rem;
+  border-radius: 50%;
+  margin: 0.5rem 0.5rem;
+}
+article#presentation .section_contact {
+  grid-area: section_contact;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+article#presentation .section_contact ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  /*    background-color: rgba(49, 77, 232, 0.486);
+  border-radius: 3px; */
+}
+article#presentation .section_contact ul li {
+  display: flex;
+  align-self: center;
+}
+article#presentation .section_contact ul li a {
+  text-decoration: none;
+}
+article#presentation .section_technologies {
+  grid-area: section_technologies;
+  display: flex;
+  flex-direction: column;
+}
+article#presentation .section_technologies ul {
+  list-style: none;
+  margin-left: 0.5rem;
+  display: flex;
+  gap: 0.3rem;
+}
+article#presentation .section_technologies ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+article#presentation .section_technologies ul li button {
+  background-color: white;
+}
+article#presentation .section_technologies ul li p {
+  font-size: 1.2rem;
 }
 
 * {
@@ -68,19 +140,19 @@ body h1 {
 }
 
 body {
-  background-color: rgb(212, 240, 244);
+  background-color: rgb(241, 241, 241);
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
-main article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+main article.article_with_video {
   border: 3px solid rgb(40, 45, 46);
   border-radius: 5px;
   width: 95vw;
+  position: relative;
+  top: 1rem;
 }/*# sourceMappingURL=main.css.map */
