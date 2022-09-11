@@ -17,8 +17,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 
-  article {
+  article.article_with_video {
     border: 3px solid rgb(40, 45, 46);
     border-radius: 5px;
     width: 95vw;
