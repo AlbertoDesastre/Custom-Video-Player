@@ -1,0 +1,71 @@
+article#presentation {
+  display: grid;
+  grid-template-areas:
+    "img section_contact"
+    "section_technologies section_technologies";
+  gap: 0.6rem;
+  background-color: white;
+  border: 3px solid gold;
+  border-radius: 5px;
+  width: 95vw;
+
+  img {
+    grid-area: img;
+    max-width: 7rem;
+    max-height: 7rem;
+    border-radius: 50%;
+
+    margin: 0.5rem 0.5rem;
+  }
+
+  .section_contact {
+    grid-area: section_contact;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      /*    background-color: rgba(49, 77, 232, 0.486);
+      border-radius: 3px; */
+
+      li {
+        display: flex;
+        align-self: center;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .section_technologies {
+    grid-area: section_technologies;
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      list-style: none;
+      margin-left: 0.5rem;
+      display: flex;
+      gap: 0.3rem;
+
+      li {
+        margin-bottom: 0.5rem;
+        display: flex;
+
+        button {
+          background-color: white;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

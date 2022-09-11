@@ -75,6 +75,64 @@
   padding-bottom: 0.6rem;
 }
 
+article#presentation {
+  display: grid;
+  grid-template-areas: "img section_contact" "section_technologies section_technologies";
+  gap: 0.6rem;
+  background-color: white;
+  border: 3px solid gold;
+  border-radius: 5px;
+  width: 95vw;
+}
+article#presentation img {
+  grid-area: img;
+  max-width: 7rem;
+  max-height: 7rem;
+  border-radius: 50%;
+  margin: 0.5rem 0.5rem;
+}
+article#presentation .section_contact {
+  grid-area: section_contact;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+article#presentation .section_contact ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  /*    background-color: rgba(49, 77, 232, 0.486);
+  border-radius: 3px; */
+}
+article#presentation .section_contact ul li {
+  display: flex;
+  align-self: center;
+}
+article#presentation .section_contact ul li a {
+  text-decoration: none;
+}
+article#presentation .section_technologies {
+  grid-area: section_technologies;
+  display: flex;
+  flex-direction: column;
+}
+article#presentation .section_technologies ul {
+  list-style: none;
+  margin-left: 0.5rem;
+  display: flex;
+  gap: 0.3rem;
+}
+article#presentation .section_technologies ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+article#presentation .section_technologies ul li button {
+  background-color: white;
+}
+article#presentation .section_technologies ul li p {
+  font-size: 1.2rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -82,7 +140,7 @@
 }
 
 body {
-  background-color: rgb(212, 240, 244);
+  background-color: rgb(241, 241, 241);
 }
 
 main {
