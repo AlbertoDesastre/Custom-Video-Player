@@ -69,6 +69,19 @@ body h1 {
   list-style: none;
 }
 
+.section_description {
+  /*   position: absolute;
+  top: 0;
+  right: 0; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-left: 0.5rem;
+}
+.section_description p {
+  padding-bottom: 0.6rem;
+}
+
 * {
   margin: 0;
   padding: 0;
