@@ -1,8 +1,7 @@
 @import "./styles/svideo";
 @import "./styles/scontrollers";
 @import "./styles/events";
-@import "./styles/description";
-@import "./styles/presentation";
+@import "./styles/fastforward";
 
 * {
   margin: 0;
@@ -11,21 +10,11 @@
 }
 
 body {
-  background-color: #e2fdff;
+  background-color: rgb(27, 27, 27);
 }
 main {
   display: flex;
   flex-direction: column;
-  /* Turned this off because it doesn't allow me to change the article's size */
-  /* align-items: center; */
-  gap: 2rem;
-
-  article.article_with_video {
-    border: 2px solid rgb(40, 45, 46);
-    border-radius: 5px;
-    width: 100%;
-    position: relative;
-  }
 }
 
 .hide {
