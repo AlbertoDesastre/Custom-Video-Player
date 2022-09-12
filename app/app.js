@@ -24,7 +24,7 @@ if (video.readyState >= 2) {
 /* Video's current time management */
 video.addEventListener("timeupdate", () => {
   /*  console.log(durationToSeconds(video.currentTime)); */
-  current_time.textContent = durationToSeconds(video.currentTime);
+  current_time.textContent = durationToSeconds(video.currentTime) + " //";
 
   progressBar.max = video.duration;
   progressBar.value = video.currentTime;

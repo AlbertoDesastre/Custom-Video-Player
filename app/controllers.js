@@ -5,6 +5,7 @@ const progressBar = document.querySelector("progress");
 const fullscreen = document.querySelector(".fullscreen");
 const video = document.querySelector("video");
 const everyControl = document.querySelector("#section_controllers");
+const header = document.querySelector("header");
 
 let isItReady = false;
 let isItPlaying = false;
@@ -23,11 +24,23 @@ if (video.readyState >= 2) {
 fullscreen.addEventListener("click", () => {
   if (!document.fullscreenElement) {
     /* This is a promise. Pending to study promises. */
+    header.classList.toggle("hide");
     app.requestFullscreen().catch((error) => console.error(error));
   } else {
+    header.classList.toggle("hide");
     document.exitFullscreen().catch((error) => console.error(error));
   }
 });
+
+/* Function that listen if user pressed ESC to exit fullscreen to show everything again. */
+
+/* document.addEventListener("keyup", (e) => {
+  console.log("Aa");
+  if (document.fullscreenElement && e.key === 27) {
+    header.classList.toggle("hide");
+    document.exitFullscreen().catch((error) => console.error(error));
+  }
+}); */
 
 /* Play and pause management */
 play.addEventListener("click", () => {
