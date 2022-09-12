@@ -24,15 +24,23 @@ if (video.readyState >= 2) {
 fullscreen.addEventListener("click", () => {
   if (!document.fullscreenElement) {
     /* This is a promise. Pending to study promises. */
-    header.classList.add("hide");
+    header.classList.toggle("hide");
     app.requestFullscreen().catch((error) => console.error(error));
   } else {
-    header.classList.remove("hide");
+    header.classList.toggle("hide");
     document.exitFullscreen().catch((error) => console.error(error));
   }
 });
 
-/* Function that hides everything if video is on fullscreen. */
+/* Function that listen if user pressed ESC to exit fullscreen to show everything again. */
+
+/* document.addEventListener("keyup", (e) => {
+  console.log("Aa");
+  if (document.fullscreenElement && e.key === 27) {
+    header.classList.toggle("hide");
+    document.exitFullscreen().catch((error) => console.error(error));
+  }
+}); */
 
 /* Play and pause management */
 play.addEventListener("click", () => {

@@ -196,7 +196,7 @@ main {
 main article.article_with_video {
   border: 2px solid rgb(40, 45, 46);
   border-radius: 5px;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
