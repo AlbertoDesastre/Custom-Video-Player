@@ -194,11 +194,10 @@ main {
   gap: 2rem;
 }
 main article.article_with_video {
-  border: 3px solid rgb(40, 45, 46);
+  border: 2px solid rgb(40, 45, 46);
   border-radius: 5px;
-  width: 95vw;
+  width: 100vw;
   position: relative;
-  top: 1rem;
 }
 
 .hide {
