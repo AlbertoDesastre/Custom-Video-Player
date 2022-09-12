@@ -11,12 +11,13 @@
 }
 
 body {
-  background-color: rgb(241, 241, 241);
+  background-color: #e2fdff;
 }
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* Turned this off because it doesn't allow me to change the article's size */
+  /* align-items: center; */
   gap: 2rem;
 
   article.article_with_video {
