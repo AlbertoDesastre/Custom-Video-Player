@@ -7,7 +7,7 @@ const video = document.querySelector("video");
 const progressBar = document.querySelector("progress");
 const current_time = document.querySelector(".current_time");
 const video_duration = document.querySelector(".video_duration");
-const eventSection = document.querySelector("#list_events");
+const eventSection = document.querySelector(".list_events");
 
 let currentEvents = [];
 
