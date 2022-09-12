@@ -5,6 +5,7 @@ const progressBar = document.querySelector("progress");
 const fullscreen = document.querySelector(".fullscreen");
 const video = document.querySelector("video");
 const everyControl = document.querySelector("#section_controllers");
+const header = document.querySelector("header");
 
 let isItReady = false;
 let isItPlaying = false;
@@ -23,11 +24,15 @@ if (video.readyState >= 2) {
 fullscreen.addEventListener("click", () => {
   if (!document.fullscreenElement) {
     /* This is a promise. Pending to study promises. */
+    header.classList.add("hide");
     app.requestFullscreen().catch((error) => console.error(error));
   } else {
+    header.classList.remove("hide");
     document.exitFullscreen().catch((error) => console.error(error));
   }
 });
+
+/* Function that hides everything if video is on fullscreen. */
 
 /* Play and pause management */
 play.addEventListener("click", () => {

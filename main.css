@@ -199,4 +199,8 @@ main article.article_with_video {
   width: 95vw;
   position: relative;
   top: 1rem;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
