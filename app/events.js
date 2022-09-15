@@ -5,5 +5,9 @@ export const events = [
     to: 10,
     text: "Events are shown depending on the current duration of the video",
   },
-  { from: 11, to: 15, text: "Still working on this mini-project" },
+  {
+    from: 11,
+    to: 30,
+    text: "Keep an eye on my next projects using advanced React features on my GitHub.",
+  },
 ];

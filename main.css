@@ -82,31 +82,6 @@
   list-style: none;
 }
 
-#delay_and_forward {
-  position: relative;
-  top: 2rem;
-  left: 1rem;
-  z-index: 2;
-  display: flex;
-  gap: 6rem;
-}
-#delay_and_forward button {
-  width: 60px;
-  height: 60px;
-  background-color: transparent;
-  border-radius: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 50%;
-}
-#delay_and_forward button#backward {
-  background-image: url("./media/img/fast-forward.png");
-  transform: rotate(180deg);
-}
-#delay_and_forward button#forward {
-  background-image: url("./media/img/fast-forward.png");
-}
-
 * {
   margin: 0;
   padding: 0;
