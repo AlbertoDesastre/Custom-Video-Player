@@ -99,4 +99,21 @@ main {
 
 .hide {
   display: none;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* 
+Solution to make controlls always on center
+
+#controls {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+ *//*# sourceMappingURL=main.css.map */
