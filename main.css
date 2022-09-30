@@ -50,7 +50,7 @@
 #section_controllers progress[value] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+       appearance: none;
 }
 #section_controllers progress[value]::-webkit-progress-bar {
   background-color: #eee;
@@ -82,6 +82,36 @@
   list-style: none;
 }
 
+#additional_controls {
+  /*  z-index: 2; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+#additional_controls button {
+  padding: 1rem;
+  background-color: transparent;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#additional_controls button#backward {
+  transform: rotate(180deg);
+  background-image: url(../media/img/fast-forward.png);
+}
+#additional_controls button#moved_time {
+  background-image: url(../media/img/fast-forward.png);
+}
+#additional_controls button#forward {
+  background-image: url(../media/img/fast-forward.png);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -99,4 +129,4 @@ main {
 
 .hide {
   display: none;
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
