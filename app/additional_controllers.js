@@ -6,14 +6,30 @@ const ten_less = document.querySelector("#ten_less");
 
 const video = document.querySelector("video");
 
-/* forward.addEventListener("click", () => {
-  video.currentTime = video.currentTime + 10;
-});
+const hideSide = (direction) => {
+  if (direction === "right") {
+    forward.classList.add("hide");
+    ten_more.classList.add("hide");
+  }
 
-backward.addEventListener("click", () => {
-  video.currentTime = video.currentTime - 10;
-});
- */
+  if (direction === "left") {
+    backward.classList.add("hide");
+    ten_less.classList.add("hide");
+  }
+};
+
+const showUpSide = (direction) => {
+  if (direction === "right") {
+    forward.classList.remove("hide");
+    ten_more.classList.remove("hide");
+  }
+
+  if (direction === "left") {
+    backward.classList.remove("hide");
+    ten_less.classList.remove("hide");
+  }
+};
+
 additional_controls.addEventListener("dblclick", (e) => {
   const halfOfTheScreen = additional_controls.offsetWidth / 2;
   const userClickedOn = e.pageX;
@@ -21,30 +37,24 @@ additional_controls.addEventListener("dblclick", (e) => {
   if (userClickedOn < halfOfTheScreen) {
     video.currentTime = video.currentTime - 10;
     /* In case the right side it's still showing up it immediately hides */
-    forward.classList.add("hide");
-    ten_more.classList.add("hide");
+    hideSide("right");
 
     /* Then it continues with the normal functioning on the left side */
-    backward.classList.remove("hide");
-    ten_less.classList.remove("hide");
+    showUpSide("left");
 
     setTimeout(() => {
-      backward.classList.add("hide");
-      ten_less.classList.add("hide");
+      hideSide("left");
     }, 1200);
   } else {
     video.currentTime = video.currentTime + 10;
     /* In case the right side it's still showing up it immediately hides */
-    backward.classList.add("hide");
-    ten_less.classList.add("hide");
+    hideSide("left");
 
     /* Then it continues with the normal functioning on the left side */
-    forward.classList.remove("hide");
-    ten_more.classList.remove("hide");
+    showUpSide("right");
 
     setTimeout(() => {
-      forward.classList.add("hide");
-      ten_more.classList.add("hide");
+      hideSide("right");
     }, 1200);
   }
 });
