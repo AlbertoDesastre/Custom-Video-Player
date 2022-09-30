@@ -105,7 +105,7 @@
   transform: rotate(180deg);
   background-image: url(../media/img/fast-forward.png);
 }
-#additional_controls button#moved_time {
+#additional_controls button#time_passed {
   background-image: url(../media/img/fast-forward.png);
 }
 #additional_controls button#forward {
