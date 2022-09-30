@@ -1,5 +1,20 @@
 // Solution to make controlls always on center
 
+@keyframes myAnimation {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 #additional_controls {
   /*  z-index: 2; */
   position: absolute;
@@ -12,24 +27,35 @@
   justify-content: center;
   gap: 1rem;
 
+  p {
+    color: white;
+  }
+
   button {
-    padding: 1.5rem;
-    background-color: transparent;
-    background-size: 70%;
+    padding: 2rem;
+    background-color: white;
+    background-size: 45%;
     background-position: center;
     background-repeat: no-repeat;
 
     &#backward {
       transform: rotate(180deg);
       background-image: url(../media/img/fast-forward.png);
-      border-radius: 25px;
+      border-radius: 50%;
       border: none;
+
+      animation-name: myAnimation;
+      animation-duration: 1200ms;
+      animation-fill-mode: forwards;
     }
 
     &#forward {
       background-image: url(../media/img/fast-forward.png);
-      border-radius: 25px;
+      border-radius: 50%;
       border: none;
+
+      animation-name: myAnimation;
+      animation-duration: 1200ms;
     }
   }
 }

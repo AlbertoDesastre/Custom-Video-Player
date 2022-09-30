@@ -1,32 +1,32 @@
 const additional_controls = document.querySelector("#additional_controls");
 const backward = document.querySelector("#backward");
 const forward = document.querySelector("#forward");
-const ten_more = document.querySelector("#ten_more");
-const ten_less = document.querySelector("#ten_less");
+/* const ten_more = document.querySelector("#ten_more");
+const ten_less = document.querySelector("#ten_less"); */
 
 const video = document.querySelector("video");
 
 const hideSide = (direction) => {
   if (direction === "right") {
     forward.classList.add("hide");
-    ten_more.classList.add("hide");
+    /*    ten_more.classList.add("hide"); */
   }
 
   if (direction === "left") {
     backward.classList.add("hide");
-    ten_less.classList.add("hide");
+    /*     ten_less.classList.add("hide"); */
   }
 };
 
 const showUpSide = (direction) => {
   if (direction === "right") {
     forward.classList.remove("hide");
-    ten_more.classList.remove("hide");
+    /*   ten_more.classList.remove("hide"); */
   }
 
   if (direction === "left") {
     backward.classList.remove("hide");
-    ten_less.classList.remove("hide");
+    /*     ten_less.classList.remove("hide"); */
   }
 };
 
