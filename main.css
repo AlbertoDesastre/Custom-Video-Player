@@ -92,24 +92,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 #additional_controls button {
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: transparent;
-  background-size: 80%;
+  background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
 }
 #additional_controls button#backward {
   transform: rotate(180deg);
   background-image: url(../media/img/fast-forward.png);
-}
-#additional_controls button#time_passed {
-  background-image: url(../media/img/fast-forward.png);
+  border-radius: 25px;
+  border: none;
 }
 #additional_controls button#forward {
   background-image: url(../media/img/fast-forward.png);
+  border-radius: 25px;
+  border: none;
 }
 
 * {
